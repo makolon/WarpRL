@@ -1,7 +1,7 @@
 # WarpRL
-This repository provides a custom **Gym-compatible reinforcement learning (RL) environment** built using **[NVIDIA Warp](https://github.com/NVIDIA/warp)**, a highly efficient framework for GPU-accelerated simulations. The environment is designed for fast, scalable, and high-performance training of RL agents in physics-based tasks.
+This repository provides a custom **Gym-like reinforcement learning (RL) environment** built using **[NVIDIA Warp](https://github.com/NVIDIA/warp)**, a highly efficient framework for GPU-accelerated simulations. The environment is designed for fast, scalable, and high-performance training of RL agents in physics-based tasks.
 
-## Setup & Running Training/Inference Code
+## Setup & Running Sample Code
 1. Clone the WarpRL repository.
 To clone the repository, run the following command: ```git clone git@github.com:makolon/WarpRL.git```
 
@@ -29,3 +29,12 @@ You can run a sample code using the following command: ```uv run python -m warp.
 
 7. Run the training code.
 To execute the training script, use the following command: ```uv run scripts/train_warp.py env=warp_ant alg=shac```
+
+## License
+This software includes components derived from NVIDIA Warp, which are licensed under the NVIDIA Software License Agreement. Users must comply with NVIDIA's licensing terms for any redistribution or modification of this software. 
+
+## Acknowledgments
+WarpRL's development has been made possible thanks to these open-source projects:
+- [AHAC](https://github.com/imgeorgiev/DiffRL): An Adaptive Horizon Actor-Critic algorithm designed to optimize policies in contact-rich environments by dynamically adjusting model-based horizons, outperforming SHAC and PPO on high-dimensional locomotion tasks.
+- [SHAC](https://github.com/NVlabs/DiffRL): A GPU-accelerated policy learning method using differentiable simulation to solve robotic control tasks, enabling faster and more effective learning through parallelized simulation.
+- [PWM](https://github.com/imgeorgiev/PWM): A Model-Based RL algorithm leveraging large multi-task world models to efficiently learn continuous control policies with first-order gradients, achieving superior performance on complex locomotion tasks without relying on ground-truth simulation dynamics.
