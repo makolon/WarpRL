@@ -153,53 +153,6 @@ wheels = [
 ]
 
 [[package]]
-name = "dexworldmodel"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "gym" },
-    { name = "hydra-core" },
-    { name = "ipython" },
-    { name = "matplotlib" },
-    { name = "pyglet" },
-    { name = "seaborn" },
-    { name = "torch" },
-    { name = "torchrl" },
-    { name = "torchvision" },
-    { name = "tqdm" },
-    { name = "urchin" },
-    { name = "usd-core" },
-    { name = "wandb" },
-    { name = "warp-lang", extra = ["extras"] },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "ruff" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "gym", specifier = ">=0.26.2" },
-    { name = "hydra-core", specifier = ">=1.3.2" },
-    { name = "ipython", specifier = ">=8.27.0" },
-    { name = "matplotlib", specifier = ">=3.9.2" },
-    { name = "pyglet", specifier = ">=2.0.17" },
-    { name = "seaborn", specifier = ">=0.13.2" },
-    { name = "torch", specifier = "==2.4.1+cu121" },
-    { name = "torchrl", specifier = "==0.5.0" },
-    { name = "torchvision", specifier = "==0.19.1+cu121" },
-    { name = "tqdm", specifier = ">=4.64.1" },
-    { name = "urchin", specifier = ">=0.0.27" },
-    { name = "usd-core", specifier = "==24.8" },
-    { name = "wandb", specifier = ">=0.18.1" },
-    { name = "warp-lang", extras = ["extras"], specifier = "==1.5.1" },
-]
-
-[package.metadata.requires-dev]
-dev = [{ name = "ruff", specifier = ">=0.6.7" }]
-
-[[package]]
 name = "docker-pycreds"
 version = "0.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1632,6 +1585,53 @@ extras = [
     { name = "pyglet" },
     { name = "usd-core" },
 ]
+
+[[package]]
+name = "warprl"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "gym" },
+    { name = "hydra-core" },
+    { name = "ipython" },
+    { name = "matplotlib" },
+    { name = "pyglet" },
+    { name = "seaborn" },
+    { name = "torch" },
+    { name = "torchrl" },
+    { name = "torchvision" },
+    { name = "tqdm" },
+    { name = "urchin" },
+    { name = "usd-core" },
+    { name = "wandb" },
+    { name = "warp-lang", extra = ["extras"] },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "gym", specifier = ">=0.26.2" },
+    { name = "hydra-core", specifier = ">=1.3.2" },
+    { name = "ipython", specifier = ">=8.27.0" },
+    { name = "matplotlib", specifier = ">=3.9.2" },
+    { name = "pyglet", specifier = ">=2.0.17" },
+    { name = "seaborn", specifier = ">=0.13.2" },
+    { name = "torch", specifier = "==2.4.1+cu121" },
+    { name = "torchrl", specifier = "==0.5.0" },
+    { name = "torchvision", specifier = "==0.19.1+cu121" },
+    { name = "tqdm", specifier = ">=4.64.1" },
+    { name = "urchin", specifier = ">=0.0.27" },
+    { name = "usd-core", specifier = "==24.8" },
+    { name = "wandb", specifier = ">=0.18.1" },
+    { name = "warp-lang", extras = ["extras"], specifier = "==1.5.1" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ruff", specifier = ">=0.6.7" }]
 
 [[package]]
 name = "wcwidth"

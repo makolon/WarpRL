@@ -1,5 +1,5 @@
 config:
-  _target_: pwm.envs.ant.AntEnv
+  _target_: warprl.envs.ant.AntEnv
   visualize: ${general.visualize}
   device: ${general.device}
   num_envs: 64

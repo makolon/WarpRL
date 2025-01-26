@@ -1,5 +1,5 @@
 config:
-  _target_: pwm.envs.double_pendulum.DoublePendulumEnv
+  _target_: warprl.envs.double_pendulum.DoublePendulumEnv
   visualize: ${general.visualize}
   device: ${general.device}
   num_envs: 1024

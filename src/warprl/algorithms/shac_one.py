@@ -23,7 +23,7 @@ from warprl.utils.time_report import TimeReport
 tensordict.set_lazy_legacy(False).set()
 
 
-class SHAC:
+class SHAC_ONE:
     """
     Short Horizon Actor Critic (SHAC) algorithm based on the paper
     Xu et al. Accelerated Policy Learning with Parallel Differentiable Simulation

@@ -1,12 +1,12 @@
-_target_: pwm.algorithms.ahac.AHAC
+_target_: warprl.algorithms.ahac.AHAC
 _recursive_: False
 
 actor_config:
-  _target_: pwm.models.actor.ActorStochasticMLP
+  _target_: warprl.models.actor.ActorStochasticMLP
   units: [400, 200, 100]
   activation_class: nn.Mish
 critic_config:
-  _target_: pwm.models.critic.CriticMLP
+  _target_: warprl.models.critic.CriticMLP
   units: [400, 200]
   activation_class: nn.Mish
 

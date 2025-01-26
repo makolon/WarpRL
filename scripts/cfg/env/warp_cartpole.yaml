@@ -1,5 +1,5 @@
 config:
-  _target_: pwm.envs.cartpole.CartPoleEnv
+  _target_: warprl.envs.cartpole.CartPoleEnv
   visualize: ${general.visualize}
   device: ${general.device}
   num_envs: 1024

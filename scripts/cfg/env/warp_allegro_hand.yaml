@@ -1,5 +1,5 @@
 config:
-  _target_: pwm.envs.allegro_hand.AllegroHandEnv
+  _target_: warprl.envs.allegro_hand.AllegroHandEnv
   visualize: ${general.visualize}
   device: ${general.device}
   num_envs: 16

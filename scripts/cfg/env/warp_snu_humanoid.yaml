@@ -1,5 +1,5 @@
 config:
-  _target_: pwm.envs.snuhumanoid.SNUHumanoidEnv
+  _target_: warprl.envs.snuhumanoid.SNUHumanoidEnv
   visualize: ${general.visualize}
   device: ${general.device}
   num_envs: 64

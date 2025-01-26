@@ -1,8 +1,8 @@
-_target_: pwm.algorithms.pwm.PWM
+_target_: warprl.algorithms.pwm.PWM
 _recursive_: False
 
 actor_config:
-  _target_: pwm.models.actor.ActorStochasticMLP
+  _target_: warprl.models.actor.ActorStochasticMLP
   units: [400, 200, 100]
   activation_class: nn.Mish
   init_gain: 1.0
@@ -10,12 +10,12 @@ actor_config:
   min_logstd: -1.427
 
 critic_config:
-  _target_: pwm.models.critic.CriticMLP
+  _target_: warprl.models.critic.CriticMLP
   units: [400, 200]
   activation_class: nn.Mish
 
 world_model_config:
-  _target_: pwm.models.world_model.WorldModel
+  _target_: warprl.models.world_model.WorldModel
   units: [512, 512]
   encoder_units: [256]
   num_bins: 
@@ -25,13 +25,13 @@ world_model_config:
     last_layer: normedlinear
     last_layer_kwargs:
       act:
-        _target_: pwm.models.mlp.SimNorm
+        _target_: warprl.models.mlp.SimNorm
         simnorm_dim: 8
   dynamics:
     last_layer: normedlinear
     last_layer_kwargs:
       act:
-        _target_: pwm.models.mlp.SimNorm
+        _target_: warprl.models.mlp.SimNorm
         simnorm_dim: 8
   reward:
     last_layer: linear
