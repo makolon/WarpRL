@@ -1,0 +1,30 @@
+_target_: pwm.algorithms.ahac.AHAC
+_recursive_: False
+
+actor_config:
+  _target_: pwm.models.actor.ActorStochasticMLP
+  units: [400, 200, 100]
+  activation_class: nn.Mish
+critic_config:
+  _target_: pwm.models.critic.CriticMLP
+  units: [400, 200]
+  activation_class: nn.Mish
+
+actor_lr: 2e-3
+critic_lr: 2e-3
+lr_schedule: linear
+obs_rms: True
+ret_rms: False
+critic_iterations: # if None train until convergence
+critic_batches: 4
+critic_method: td-lambda # ('td-lambda', 'one-step')
+lam: 0.95
+gamma: 0.99
+max_epochs: 2000
+horizon: 64
+contact_threshold: 3000
+actor_grad_norm: 1.0
+save_interval: 400
+stochastic_eval: False
+eval_runs: 12
+device: ${general.device}

@@ -1,0 +1,32 @@
+config:
+  _target_: pwm.envs.ant.AntEnv
+  visualize: ${general.visualize}
+  device: ${general.device}
+  num_envs: 64
+  fps: 60
+  substeps: 16
+  episode_length: 1000
+  stochastic_init: False
+  no_grad: False
+  MM_caching_frequency: 16
+  early_termination: True
+  action_scale: 200 # [0.69813, 0.610865, 0.69813, 0.610865, 0.69813, 0.610865, 0.69813, 0.610865]
+  action_offset: 0.0 # [0.0, 1.134465, 0.0, -1.134465, 0.0, -1.134465, 0.0, 1.134465]
+  motor_strength: 0.0 # [1600.0, 1600.0, 1600.0, 1600.0, 1600.0, 1600.0, 1600.0, 1600.0]
+  motor_damping: 0.0 # [40.0, 40.0, 40.0, 40.0, 40.0, 40.0, 40.0, 40.0]
+  action_penalty: 0.0
+  joint_vel_obs_scaling: 0.1
+  termination_height: 0.27
+  up_rew_scale: 0.1
+  renderer_type: "opengl"
+  integrator_type: "featherstone"
+
+shac:
+  actor_lr: 2e-3
+  critic_lr: 5e-4
+  max_epochs: 2000
+  save_interval: 400
+  actor_mlp:
+    units: [400, 200, 100]
+  critic_mlp:
+    units: [400, 200]

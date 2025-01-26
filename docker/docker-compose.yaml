@@ -1,0 +1,37 @@
+x-default-warprl-volumes: &default-warprl-volumes
+  - type: bind
+    source: ../
+    target: ${WARPRL_PATH}
+
+x-default-warprl-environment: &default-warprl-environment
+  - DISPLAY=:0
+
+x-default-warprl-deploy: &default-warprl-deploy
+  resources:
+    reservations:
+      devices:
+        - driver: nvidia
+          count: all
+          capabilities: [ gpu ]
+
+services:
+  # This service is the DexWorldModel image
+  warprl:
+    profiles: [ "warprl" ]
+    env_file: .env
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+      args:
+        - WARPRL_PATH_ARG=${WARPRL_PATH}
+        - DOCKER_USER_HOME_ARG=${DOCKER_USER_HOME}
+    image: warprl:${WARPRL_VERSION}
+    container_name: warprl
+    environment: *default-warprl-environment
+    volumes: *default-warprl-volumes
+    network_mode: host
+    deploy: *default-warprl-deploy
+    # This is the entrypoint for the container
+    entrypoint: bash
+    stdin_open: true
+    tty: true

@@ -1,0 +1,49 @@
+config:
+  _target_: pwm.envs.humanoid.HumanoidEnv
+  visualize: ${general.visualize}
+  device: ${general.device}
+  num_envs: 64
+  fps: 60
+  substeps: 48
+  episode_length: 1000
+  stochastic_init: False
+  no_grad: False
+  MM_caching_frequency: 48
+  early_termination: True
+  action_scale: [0.7854, 0.9163, 0.61087, 0.2618, 0.829035, 0.872665, 1.41372,
+    0.87266, 0.87266, 0.2618, 0.829035, 0.872665, 1.41372, 0.87266,
+    0.87266, 1.0472, 1.0472, 1.22173, 1.0472, 1.0472, 1.22173
+  ]
+  action_offset: [0.0, -0.3927, 0.0, -0.17453, -0.218082, -0.523595, -1.37831,
+    0.0, 0.0, -0.17453, -0.218082, -0.523595, -1.37831, 0.0,
+    0.0, 0.0, 0.0, -0.349065, 0.0, 0.0, -0.349065
+  ]
+  motor_strength: [
+    600.0, 600.0, 600.0, 600.0, 600.0, 1500.0, 1200.0,
+    400.0, 400.0, 600.0, 600.0, 1500.0, 1200.0, 400.0,
+    400.0, 400.0, 400.0, 600.0, 400.0, 400.0, 600.0
+  ]
+  motor_damping: [
+    20.0, 20.0, 20.0, 20.0, 20.0, 60.0, 40.0,
+    10.0, 10.0, 20.0, 20.0, 60.0, 40.0, 10.0,
+    10.0, 10.0, 10.0, 20.0, 10.0, 10.0, 20.0
+  ]
+  action_penalty: -0.002
+  heading_rew_scale: 1.0
+  height_rew_scale: 10.0
+  joint_vel_obs_scaling: 0.1
+  termination_height: 0.74
+  termination_tolerance: 0.1
+  up_rew_scale: 10.0
+  renderer_type: "opengl"
+  integrator_type: "featherstone"
+
+shac:
+  actor_lr: 2e-3
+  critic_lr: 5e-4
+  max_epochs: 3000
+  save_interval: 500
+  actor_mlp:
+    units: [400, 200, 100]
+  critic_mlp:
+    units: [400, 200]

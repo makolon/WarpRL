@@ -1,0 +1,36 @@
+config:
+  _target_: pwm.envs.quadruped.QuadrupedEnv
+  visualize: ${general.visualize}
+  device: ${general.device}
+  num_envs: 4
+  fps: 100
+  substeps: 5
+  episode_length: 1000
+  stochastic_init: False
+  no_grad: False
+  MM_caching_frequency: 48
+  early_termination: True
+  action_scale: 1.0
+  action_strength: [
+    1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
+    1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+  ]
+  action_penalty: -0.002
+  heading_rew_scale: 1.0
+  height_rew_scale: 10.0
+  joint_vel_obs_scaling: 0.1
+  termination_height: 0.74
+  termination_tolerance: 0.1
+  up_rew_scale: 10.0
+  renderer_type: "opengl"
+  integrator_type: "featherstone"
+
+shac:
+  actor_lr: 2e-3
+  critic_lr: 5e-4
+  max_epochs: 3000
+  save_interval: 500
+  actor_mlp:
+    units: [400, 200, 100]
+  critic_mlp:
+    units: [400, 200]
