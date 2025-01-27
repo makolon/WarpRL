@@ -15,7 +15,7 @@ x-default-warprl-deploy: &default-warprl-deploy
           capabilities: [ gpu ]
 
 services:
-  # This service is the DexWorldModel image
+  # This service is the WarpRL image
   warprl:
     profiles: [ "warprl" ]
     env_file: .env
