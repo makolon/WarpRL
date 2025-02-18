@@ -533,6 +533,7 @@ wheels = [
 name = "markupsafe"
 version = "2.1.5"
 source = { registry = "https://download.pytorch.org/whl/cu121" }
+sdist = { url = "https://download.pytorch.org/whl/MarkupSafe-2.1.5.tar.gz", hash = "sha256:d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b" }
 wheels = [
     { url = "https://download.pytorch.org/whl/MarkupSafe-2.1.5-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:a17a92de5231666cfbe003f0e4b9b3a7ae3afb1ec2845aadc2bacc93ff85febc" },
     { url = "https://download.pytorch.org/whl/MarkupSafe-2.1.5-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:72b6be590cc35924b02c78ef34b467da4ba07e4e0f0454a2c5907f473fc50ce5" },
@@ -1567,16 +1568,16 @@ wheels = [
 
 [[package]]
 name = "warp-lang"
-version = "1.5.1"
+version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "numpy" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/17/ce/4e690f1d9c55672d875c109520b85cd536cec74ca3120cf2e910ae4b700d/warp_lang-1.5.1-py3-none-macosx_10_13_universal2.whl", hash = "sha256:f9828f3d9301f60a0b4b82d797dd4e9dced73537c9758ed992150cadba42416d", size = 44361002 },
-    { url = "https://files.pythonhosted.org/packages/4a/98/643a7ee0c961aa2ab1a8f12fb5a688499233bbce4707981daa8d486234e9/warp_lang-1.5.1-py3-none-manylinux2014_aarch64.whl", hash = "sha256:b1f9fcd62715d8cee29ba6472ac5f10736b77161f35fd218867c0cdd6fedc06c", size = 84345794 },
-    { url = "https://files.pythonhosted.org/packages/78/c0/5045d31d572ee4af33d1f6b0dc3ca0c42d2a51e16d10ed051d4e4971fc23/warp_lang-1.5.1-py3-none-manylinux2014_x86_64.whl", hash = "sha256:e979f207eb8342da419acf0b0f555ad6c05711505064b660de216737c6c6f1fa", size = 84570573 },
-    { url = "https://files.pythonhosted.org/packages/78/fd/8e423840da33a2973f30782d63be56c1633c6425907f37bb8e2740d72be1/warp_lang-1.5.1-py3-none-win_amd64.whl", hash = "sha256:5ccec622fb3f75d66c7507823970b2609067260cc6f6b5c3181288fd2a1d349c", size = 69988499 },
+    { url = "https://files.pythonhosted.org/packages/b7/09/bbd313e7d99b902f9e94d8fadefea8ce674896428fae2caeb944f7b1d9b6/warp_lang-1.6.0-py3-none-macosx_10_13_universal2.whl", hash = "sha256:3dc28f91203bcd78a135aedc8eafd7fa1bf829a8adeaedbb5d5638c28a8673a0", size = 44449537 },
+    { url = "https://files.pythonhosted.org/packages/35/a1/7ffeb147f82b19232b585efd4966ddefbb5de1a10385040cf174738a9a22/warp_lang-1.6.0-py3-none-manylinux2014_aarch64.whl", hash = "sha256:79cbf1b7425f055229b737fc7e54bd9db314e65148f5f8afc0ab160d1677c3a2", size = 128672701 },
+    { url = "https://files.pythonhosted.org/packages/f2/cb/8cbc23e94742bf483300d147f62a855d52671e3b1aad8b6b92a2a0dc9b74/warp_lang-1.6.0-py3-none-manylinux2014_x86_64.whl", hash = "sha256:2c2af77e1e2600d3f84ecf07b1e80a6faa66482e5476214c27645861fcfc2975", size = 127397266 },
+    { url = "https://files.pythonhosted.org/packages/82/83/97305c5ebb8d41b031a847161dbc4c254dd5a003638546d0c954efaa45d6/warp_lang-1.6.0-py3-none-win_amd64.whl", hash = "sha256:800903699a116ffbac67e643807eb24a12f63fa9c0a78e6760033cbba7c1913d", size = 109541393 },
 ]
 
 [package.optional-dependencies]
@@ -1627,7 +1628,7 @@ requires-dist = [
     { name = "urchin", specifier = ">=0.0.27" },
     { name = "usd-core", specifier = "==24.8" },
     { name = "wandb", specifier = ">=0.18.1" },
-    { name = "warp-lang", extras = ["extras"], specifier = "==1.5.1" },
+    { name = "warp-lang", extras = ["extras"], specifier = "==1.6.0" },
 ]
 
 [package.metadata.requires-dev]

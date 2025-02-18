@@ -18,7 +18,7 @@ dependencies = [
     "urchin>=0.0.27",
     "usd-core==24.8",
     "wandb>=0.18.1",
-    "warp-lang[extras]==1.5.1",
+    "warp-lang[extras]==1.6.0",
 ]
 
 [tool.uv]
